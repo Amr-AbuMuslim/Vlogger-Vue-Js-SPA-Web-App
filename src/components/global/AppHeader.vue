@@ -29,7 +29,7 @@ export default {
   .logo {
     user-select: none;
     span {
-      font-family: cursive;
+      font-family: "Protest Riot";
     }
     img {
       width: 50px;
@@ -55,7 +55,7 @@ export default {
       padding: 20px;
       a {
         font-size: 22px;
-        font-family: cursive;
+        font-family: "Protest Riot";
         transition: 0.4s ease-in-out;
       }
       a:hover {

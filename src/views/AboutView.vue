@@ -18,5 +18,6 @@ export default {
   background-image: url(@/assets/snN3rbgKF7McfuiQAKcoLWMn.jpeg);
   height: calc(100vh - 80px);
   background-size: cover;
+  background-position: -36px -170px;
 }
 </style>

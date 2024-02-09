@@ -68,7 +68,8 @@
       <div class="border-line"></div>
       <span
         >Made With Love By Amr Abu Muslim
-        <i class="fa-brands fa-vuejs" style="color: #35495e"></i> Developer</span
+        <i class="fa-brands fa-vuejs" style="color: #35495e"></i>
+        Developer</span
       >
     </div>
   </footer>
@@ -80,7 +81,6 @@ export default {
 </script>
 <style lang="scss" scoped>
 footer {
-  background-color: rgb(255, 250, 250);
   height: 300px;
 
   width: 100%;
@@ -94,6 +94,7 @@ footer {
     justify-content: space-evenly;
     align-items: center;
     gap: 10px;
+    margin: 0px 20px;
   }
 
   .logo {
@@ -108,7 +109,7 @@ footer {
     }
     p {
       font-size: 16px;
-      font-family: cursive;
+      font-family: "work sans";
     }
     .icons {
       display: flex;
@@ -125,10 +126,17 @@ footer {
         margin: 5px;
         font-size: 25px;
       }
-      li:last-child a {
+      li a {
+        color: #41b883;
+        transition: 0.3s;
+      }
+      li a:hover {
+        color: #03145f;
+      }
+      li:last-child a:hover {
         color: black;
       }
-      li:nth-child(3) a {
+      li:nth-child(3) a:hover {
         color: red;
       }
     }
@@ -138,8 +146,8 @@ footer {
     .footer-title {
       color: #35495e;
       font-family: fantasy;
-      font-size: 35px;
-      text-align: left;
+      font-size: 45px;
+      text-align: center;
     }
     .blogs-icons {
       ul {
@@ -149,17 +157,13 @@ footer {
         li {
           padding: 10px;
           margin: 5px;
-          font-size: 18px;
+          font-size: 20px;
+          display: flex;
+          align-items: baseline;
         }
         span {
           margin-left: 8px;
           font-size: 20px;
-        }
-        li:last-child a {
-          color: black;
-        }
-        li:nth-child(3) a {
-          color: red;
         }
       }
     }
@@ -169,7 +173,7 @@ footer {
     font-size: 20px;
     font-family: monospace;
     color: #35495e;
-    padding: 5px;
+    padding: 15px;
   }
   @media (max-width: 768px) {
   }
