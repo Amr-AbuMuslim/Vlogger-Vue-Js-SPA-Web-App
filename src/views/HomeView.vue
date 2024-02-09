@@ -1,5 +1,5 @@
 <template>
-  <div class="row" style="marin: 0px">
+  <div class="row" style="margin: 0px">
     <div class="col-md-9">
       <div class="home">
         <img alt="Vue logo" src="../assets/logo.png" />
