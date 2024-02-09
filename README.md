@@ -1,4 +1,4 @@
-# elzero-web-project
+# Vlogger
 
 ## Project setup
 ```
