@@ -1,94 +1,123 @@
 <template>
-  <div class="header">
-    <div class="container">
-      <div class="logo">
-        <img alt="Vue logo" src="@/assets/logo.png" /><span
-          >lo<span style="color: #fff">gg</span>er</span
-        >
-      </div>
-      <ul class="text-end">
-        <li><router-link to="/">Home</router-link></li>
-        <li><router-link to="/write-blog">Write-Blog</router-link></li>
-        <li><router-link to="/blogs-page">Blogs</router-link></li>
-        <li><router-link to="/about">About</router-link></li>
-        <li><router-link to="/help-page">Help</router-link></li>
+  <header>
+    <div class="logo">
+      <img src="@/assets/logo.png" alt="" /><span>lo<span>gg</span>er</span>
+    </div>
+    <div class="links">
+      <i
+        class="fa-solid fa-bars"
+        v-if="windowWidth <= 400"
+        @click="showMenu = !showMenu"
+      ></i>
+      <ul v-if="showMenu || windowWidth > 400">
+        <li><router-link to="/"> Home </router-link></li>
+        <li><router-link to="/write-blog"> Blogs </router-link></li>
+        <li><router-link to="/blogs-page"> Post Blog </router-link></li>
+        <li><router-link to="/about"> About </router-link></li>
+        <li><router-link to="/help-page"> Help </router-link></li>
       </ul>
     </div>
-  </div>
+  </header>
 </template>
 <script>
 export default {
   name: "AppHeader",
+  data: function () {
+    return { showMenu: false, windowWidth: window.innerWidth };
+  },
+  created() {
+    this.windowWidth;
+  },
 };
 </script>
 <style lang="scss" scoped>
-.header {
-  background-color: #333;
-  overflow: hidden;
+i {
+  display: none;
+}
+header {
+  display: flex;
+  position: sticky;
+  z-index: 9999;
+  top: 0px;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 10px;
 
+  background-color: rgb(53 73 94);
   .logo {
-    user-select: none;
-    span {
-      font-family: "Protest Riot";
-    }
+    color: #fff;
+
+    margin: 0 15px;
+    text-shadow: 2px 2px 12px #fff;
     img {
-      width: 50px;
-      height: 50px;
+      width: 40px;
+      height: 40px;
+      vertical-align: bottom;
     }
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 40px;
-    font-weight: 900;
-    color: #41b883;
-    text-shadow: 5px 1px 38px #3a5c4d;
-    float: left;
-    width: 200px;
-    padding: 10px;
+    span {
+      font-size: 25px;
+      font-family: cursive;
+    }
   }
+}
+.links {
   ul {
-    width: calc(100% - 200px);
-    margin: 0px;
-    float: left;
+    list-style: none;
     li {
       display: inline-block;
-      padding: 20px;
+      margin: 0 20px;
+
+      font-size: 20px;
+      padding: 2px;
       a {
-        font-size: 22px;
-        font-family: "Protest Riot";
-        transition: 0.4s ease-in-out;
-      }
-      a:hover {
-        color: #41b883;
+        text-decoration: none;
+        color: #fff;
+        font-family: cursive;
+        transition: 0.4s ease-in;
       }
     }
   }
-
-  a {
-    font-weight: bold;
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 18px;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+  a:hover {
+    color: #41b883;
   }
-  @media (max-width: 768px) {
-    .logo {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      font-size: 40px;
-      font-weight: 900;
-      color: #41b883;
-      text-shadow: 5px 1px 38px #3a5c4d;
-      float: left;
-      width: 200px;
-      padding: 10px;
-      margin-top: 100px;
-      transform: scale(1.5);
+  .router-link-active {
+    color: #41b883;
+  }
+}
+@media (max-width: 768px) {
+  i {
+    display: block;
+    color: #fff;
+    margin: 0 15px;
+    font-size: 25px;
+  }
+  ul {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    background-color: #35495e;
+    text-align: left;
+    padding-left: 0px;
+    margin: 12px;
+    padding: 5px;
+    border-radius: 6px;
+    // width: 50%;
+    // list-style: none;
+    // padding: 5px;
+    // text-align: left;
+    // color: #fff;
+    // font-size: 20px;
+    li {
+      display: inline-block;
+      margin: 0px;
+      color: #fff;
+      font-size: 20px;
+      padding: 2px;
+      width: 100%;
+      a {
+        font-size: 25px;
+        margin: 5px;
+      }
     }
   }
 }

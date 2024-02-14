@@ -69,17 +69,9 @@ export default {
       selectedPhoto: null,
     };
   },
-  // mounted(images) {
-  //   //this.fetchImage(); // Fetch image initially
-  //   this.selectedPhoto = this.randomAdd(this.images);
-  //   setInterval(this.randomAdd(images), 180000);
-  //   // const intervalId =  // 3 minutes in milliseconds
-  //   //  this.$once('beforeDestroy', () => clearInterval(intervalId)); // Clear interval on component destroy
-  // },
+
   methods: {
     randomAdd: function () {
-      // console.log(this.selectedPhoto);
-      // return this.selectedPhoto;
       return this.images[Math.floor(Math.random() * this.images.length)];
     },
   },
@@ -92,13 +84,6 @@ export default {
       this.selectedPhoto = this.randomAdd();
     }, 5000);
   },
-  // watch: {
-  //   randomAdd: function () {
-  //     setInterval(() => {
-  //      this.images[Math.floor(Math.random() * this.images.length)];
-  //     }, 5);
-  //   },
-  // },
 };
 </script>
 <style lang="scss" scoped>

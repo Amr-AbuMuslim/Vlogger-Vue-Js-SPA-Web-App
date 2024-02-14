@@ -4,7 +4,7 @@
       <img
         src="@/assets/logo.png"
         alt=""
-        style="width: 150px; margin-top: 40px"
+        style="width: 150px; margin-top: 100px"
       />
       <form ref="form" @submit.prevent="sendEmail">
         <h3>Keep In Touch</h3>
@@ -94,7 +94,6 @@ export default {
       this.contactForm.name = "";
       this.contactForm.email = "";
       this.contactForm.message = "";
-     
     },
   },
 };

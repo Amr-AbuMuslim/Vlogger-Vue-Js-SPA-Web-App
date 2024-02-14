@@ -44,7 +44,7 @@
     class="post-box"
     v-for="(post, index) in posts"
     :key="post.title"
-    v-show="post.title"
+    v-show="post.title" 
   >
     <div class="post-top">
       <h1 class="post-title">{{ post.title }}</h1>
