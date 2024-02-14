@@ -1,11 +1,7 @@
 <template>
   <div class="row" style="margin: 0px">
     <div class="col-md-6">
-      <img
-        src="@/assets/logo.png"
-        alt=""
-        style="width: 150px; margin-top: 100px"
-      />
+      <img src="@/assets/logo.png" alt="" style="width: 150px" />
       <form ref="form" @submit.prevent="sendEmail">
         <h3>Keep In Touch</h3>
         <input

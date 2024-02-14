@@ -176,6 +176,21 @@ footer {
     padding: 15px;
   }
   @media (max-width: 768px) {
+    .footer-row {
+      display: block;
+    }
+    footer {
+      .logo img {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+  footer .logo .footer-title {
+    font-size: 35px;
+  }
+  footer .blogs .footer-title {
+    font-size: 35px;
   }
 }
 </style>
